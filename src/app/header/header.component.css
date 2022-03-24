@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  border-bottom: 1px solid #EBEBEB;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__marker,
+.header__phone {
+  display: inline-block;
+  width: 22px;
+  height: 18px;
+  margin: 0 34px;
+  background-repeat: no-repeat;
+}
+
+.header__marker {
+  background-image: url(../../assets/images/marker.svg);
+}
+
+.header__phone {
+  background-image: url(../../assets/images/phone.svg);
+}
+
+.header__navigation-logo {
+  background-image: url(../../assets/images/logo.svg);
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  margin: 0 210px;
+}
+
+.header__navigation-list {
+  display: flex;
+  height: 53px;
+  gap: 50px;
+  color: rgba(34, 34, 34, 0.7);
+  margin: 0;
+  margin-top: 32px;
+}
+
+.header__navigation-list li {
+  list-style: none;
+}
+
+.header__navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid #EBEBEB;
+  border-right: 1px solid #EBEBEB;
+}
+
+.active-item {
+  color: #222222;
+  border-bottom: 1px solid #222222;
+}
