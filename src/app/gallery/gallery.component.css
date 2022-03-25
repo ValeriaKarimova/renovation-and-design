@@ -1,0 +1,59 @@
+.gallery__wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery__title {
+  font-size: 32px;
+  margin: 65px 0 48px 0;
+  color: #FFFFFF;
+  -webkit-text-stroke: 1.5px #222222;
+}
+
+.highlighted-text {
+  color: #222222;
+}
+
+.gallery {
+  display: grid;
+  margin: 0 auto;
+  gap: 10px;
+  grid-template-areas: "img1 img1 img2"
+                       "img3 img4 img2"
+                       "img5 img6 img7"
+                       "img5 img8 img8";
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+}
+
+.img6 {
+  grid-area: img6;
+}
+
+.img7 {
+  grid-area: img7;
+}
+
+.img8 {
+  grid-area: img8;
+}
+
+
