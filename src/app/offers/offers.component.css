@@ -55,7 +55,7 @@
   list-style: none;
   align-self: center;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 29px 11px;
+  padding: 29px 0;
   color: rgba(255, 255, 255, 1);
   flex-grow: 1;
 }

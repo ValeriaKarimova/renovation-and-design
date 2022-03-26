@@ -1,17 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-offers',
   templateUrl: './offers.component.html',
   styleUrls: ['./offers.component.css']
 })
-export class OffersComponent {
+export class OffersComponent implements OnInit {
+
   isActive: boolean = false;
   isService: boolean = false;
   isWorks: boolean = false;
   isDesign: boolean = false;
   isRepair: boolean = false;
 
+  ngOnInit(): void {
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = ['../../assets/images/main2.png', '../../assets/images/main3.png', '../../assets/images/main4.png', '../../assets/images/main5.png'];
+      this.preloadImages(images);
+  });
+  }
+
+ preloadImages(imgLinks: Array<string>) {
+    imgLinks.forEach((link) => {
+        const image = new Image();
+        image.src = link
+    });
+};
 
   handleMouseOver(event: MouseEvent) {
     if (event.target === null) return;
