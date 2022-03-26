@@ -1,7 +1,8 @@
 <header class="header">
   <span class="header__marker"></span>
   <nav class="header__navigation">
-    <ul class="header__navigation-list">
+    <a class="burger-menu" (click)="handleBurgerClick()"></a>
+    <ul [class.header__navigation-list__active]="isMenuOpen" class="header__navigation-list">
       <li class="active-item">Главная</li>
       <li>О компании</li>
       <li>Услуги</li>

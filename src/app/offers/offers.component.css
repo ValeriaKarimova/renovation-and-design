@@ -1,19 +1,28 @@
 .container {
   text-align: center;
+  min-height: 810px;
+  width: 100%;
+  position: relative;
+  top: 0;
 }
 
 .title {
+  position: relative;
+  z-index: 10;
   font-size: 64px;
-  margin: 65px 0 0 0;
-  color: #FFFFFF;
+  color: transparent;
   -webkit-text-stroke: 1.5px #222222;
+  margin: 0;
+  padding-top: 150px;
 }
 
-.highlighted-text {
+.title__highlighted {
   color: #222222;
 }
 
 .offers__wrapper {
+  position: relative;
+  z-index: 1;
   height: 344px;
   background-image: url(../../assets/images/main.png);
   background-repeat: no-repeat;
@@ -41,12 +50,14 @@
 }
 
 .offers__list li {
+  position: relative;
+  z-index: 20;
   list-style: none;
-  width: 25%;
   align-self: center;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 29px 0;
+  padding: 29px 11px;
   color: rgba(255, 255, 255, 1);
+  flex-grow: 1;
 }
 
 .down-circle {
@@ -54,4 +65,105 @@
   width: 40px;
   height: 40px;
   background-image: url(../../assets/images/down.svg);
+}
+
+.container__active {
+  background-size: cover;
+}
+
+.container__active a,
+.container__active .highlighted-text {
+  color: rgba(255, 255, 255, 1);
+}
+
+.container__active h1 {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 1);
+}
+
+.service,
+.works,
+.design,
+.repair {
+  position: absolute;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 736px;
+  display: none;
+  background-color: red;
+}
+
+.service a,
+.works a,
+.design a,
+.repair a {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-image: url(../../assets/images/right.svg);
+  background-repeat: no-repeat;
+  margin: 35px auto;
+}
+
+.service h6,
+.works h6,
+.design h6,
+.repair h6 {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.service span,
+.works span,
+.design span,
+.repair span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  width: 80%;
+}
+
+.service__active {
+  background-color: #eb5757;
+  display: flex;
+}
+
+.works__active {
+  background-color: #219653;
+  display: flex;
+}
+
+.design__active {
+  background-color: #2f80ed;
+  display: flex;
+}
+
+.repair__active {
+  background-color: #9b51e0;
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .offers__list {
+    flex-wrap: wrap;
+    padding: 100px 0 0 0;
+    justify-content: start;
+  }
+
+  .offers__list li {
+    min-width: 150px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .down-circle {
+    position: absolute;
+    bottom: 20px;
+  }
 }

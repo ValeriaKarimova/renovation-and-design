@@ -1,12 +1,40 @@
-<div class="container">
-  <h1 class="title"><span class="highlighted-text">Ремонт</span> и <span class="highlighted-text">дизайн</span><br> в Москве и Московской области</h1>
+<div [class.container__active]="isActive" class="container">
+  <h1 class="title"><span class="title__highlighted">Ремонт и дизайн</span><br> в Москве и Московской области</h1>
 <a class="offers__link" href="">Оставить заявку</a>
 <div class="offers__wrapper">
-  <ul class="offers__list">
-    <li>Услуги по ремонту</li>
-    <li>Виды работ</li>
-    <li>Дизайн интерьера</li>
-    <li>Ремонт помещений</li>
+  <ul class="offers__list" (mouseover)="handleMouseOver($event)">
+    <li (mouseout)="handleMouseOut($event)">
+      <span>Услуги по ремонту</span>
+      <div class="service" [class.service__active]="isService">
+        <h6>Услуги по ремонту</h6>
+        <span>С другой стороны реализация намеченных плановых заданий требуют от нас анализа.</span>
+        <a href=""></a>
+      </div>
+      </li>
+    <li (mouseout)="handleMouseOut($event)">
+      <span>Виды работ</span>
+      <div class="works" [class.works__active]="isWorks">
+        <h6>Виды работ</h6>
+        <span>С другой стороны реализация намеченных плановых заданий требуют от нас анализа.</span>
+        <a href=""></a>
+      </div>
+    </li>
+    <li (mouseout)="handleMouseOut($event)">
+      <span>Дизайн интерьера</span>
+      <div class="design" [class.design__active]="isDesign">
+        <h6>Дизайн интерьера</h6>
+        <span>С другой стороны реализация намеченных плановых заданий требуют от нас анализа.</span>
+        <a href=""></a>
+      </div>
+    </li>
+    <li (mouseout)="handleMouseOut($event)">
+      <span>Ремонт помещений</span>
+      <div class="repair" [class.repair__active]="isRepair">
+        <h6>Ремонт помещений</h6>
+        <span>С другой стороны реализация намеченных плановых заданий требуют от нас анализа.</span>
+        <a href=""></a>
+      </div>
+    </li>
   </ul>
   <a class="down-circle" href=""></a>
 </div>
